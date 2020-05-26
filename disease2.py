@@ -216,7 +216,7 @@ from keras.preprocessing import image
 # In[72]:
 
 
-test_image = image.load_img('/root/ngrok-stable-linux-amd64(1)/project/cell_images/malaria/cell_image_test/Parasitized/C33P1thinF_IMG_20150619_115808a_cell_206.png', 
+test_image = image.load_img('/root/Pictures/project/cell_images/malaria/cell_image_test/Parasitized/C33P1thinF_IMG_20150619_115808a_cell_206.png', 
                target_size=(64,64))
 
 
