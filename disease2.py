@@ -144,12 +144,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        '/root/jenkins_work/malaria/cell_image_train/',
+        '/root/workstation/malaria/cell_image_train/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        '/root/jenkins_work/malaria/cell_image_test/',
+        '/root/workstation/malaria/cell_image_test/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
