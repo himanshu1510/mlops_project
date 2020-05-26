@@ -183,6 +183,10 @@ accuracy=acc.history['val_accuracy'][0]
 
 
 accuracy=int(accuracy*100)
+f=open("accuracy.txt","w+")
+f.write(str(accuracy))
+f.close()
+print("Accuracy is:" ,accuracy , "%")
 
 
 # In[2]:
