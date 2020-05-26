@@ -144,12 +144,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        '/root/Pictures/cell_images/malaria/cell_image_train/',
+        '/root/mlops/cell_images/malaria/cell_image_train/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        '/root/Pictures/cell_images/malaria/cell_image_test/',
+        '/root/mlops/cell_images/malaria/cell_image_test/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
@@ -216,7 +216,7 @@ from keras.preprocessing import image
 # In[72]:
 
 
-test_image = image.load_img('/root/Pictures/project/cell_images/malaria/cell_image_test/Parasitized/C33P1thinF_IMG_20150619_115808a_cell_206.png', 
+test_image = image.load_img('/root/mlops/project/cell_images/malaria/cell_image_test/Parasitized/C33P1thinF_IMG_20150619_115808a_cell_206.png', 
                target_size=(64,64))
 
 
