@@ -68,12 +68,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        'C:/Users/hp19tu/Desktop/project/cell_images/malaria/cell_image_train/',
+        '/root/workstation/malaria/cell_image_train/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        'C:/Users/hp19tu/Desktop/project/cell_images/malaria/cell_image_test/',
+        '/root/workstation/malaria/cell_image_test/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
@@ -86,7 +86,8 @@ model.fit(
 acc=model.history
 accuracy=acc.history['val_accuracy'][0]
 accuracy=accuracy*100
-accuracy
+print("Accuracy is:" ,accuracy , "%")
+
 
 
 # In[ ]:
