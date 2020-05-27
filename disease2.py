@@ -176,13 +176,13 @@ acc.history
 # In[4]:
 
 
-accuracy=acc.history['val_accuracy'][0]
+accuracy=acc.history['val_accuracy'][0]*100
 
 
 # In[ ]:
 
 
-accuracy=int(accuracy*100)
+accuracy=int(accuracy)
 f=open("/root/workstation/accuracy.txt","w+")
 f.write(str(accuracy))
 f.close()
