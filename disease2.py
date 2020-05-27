@@ -192,4 +192,4 @@ print("Accuracy is:" ,accuracy , "%")
 # In[2]:
 
 
-model.save('/root/jenkins_work/disease.h5')
+model.save('/root/workstation/disease.h5')
