@@ -3,7 +3,8 @@
 
 # In[1]:
 
-
+epoch=1
+steps=100
 from keras.layers import Convolution2D
 
 
@@ -135,8 +136,7 @@ model.compile(optimizer= 'Adam' , loss ='binary_crossentropy' , metrics=['accura
 
 
 # In[23]:
-epoch=1
-steps=100
+
 
 train_datagen = ImageDataGenerator(
         rescale=1./255,
