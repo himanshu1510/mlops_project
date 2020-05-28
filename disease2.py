@@ -135,7 +135,8 @@ model.compile(optimizer= 'Adam' , loss ='binary_crossentropy' , metrics=['accura
 
 
 # In[23]:
-
+epoch=1
+steps=100
 
 train_datagen = ImageDataGenerator(
         rescale=1./255,
@@ -155,8 +156,8 @@ test_set = test_datagen.flow_from_directory(
         class_mode='binary')
 model.fit(
         training_set,
-        steps_per_epoch=10000,
-        epochs=1,
+        steps_per_epoch=steps,
+        epochs=epoch,
         validation_data=test_set,
         validation_steps=200)
 
