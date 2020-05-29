@@ -42,7 +42,7 @@ top_model=Dense(units=64,
 top_model=Dense(units=1,
            activation='sigmoid'
            )(top_model)
-model=Model(input =model.input,output=top_model)
+model=Model(inputs=model.input,outputs=top_model)
 
 
 # In[26]:
