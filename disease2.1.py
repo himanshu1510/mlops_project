@@ -16,7 +16,7 @@ from keras.models import Model
 # In[18]:
 
 
-model = load_model('disease.h5')
+model = load_model('/workstation/disease.h5')
 
 
 # In[19]:
@@ -69,12 +69,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        '/root/workstation/malaria/cell_image_train/',
+        '/workstation/malaria/cell_image_train/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        '/root/workstation/malaria/cell_image_test/',
+        '/workstation/malaria/cell_image_test/',
         target_size=(64, 64),
         batch_size=6,
         class_mode='binary')
@@ -87,6 +87,10 @@ model.fit(
 acc=model.history
 accuracy=acc.history['val_accuracy'][0]
 accuracy=accuracy*100
+accuracy=int(accuracy)
+f=open("/workstation/accuracy.txt","w+")
+f.write(str(accuracy))
+f.close()
 print("Accuracy is:" ,accuracy , "%")
 model.save('/workstation/disease.h5')
 
