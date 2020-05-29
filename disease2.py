@@ -184,7 +184,7 @@ accuracy=acc.history['val_accuracy'][0]*100
 
 
 accuracy=int(accuracy)
-f=open("/root/workstation/accuracy.txt","w+")
+f=open("/workstation/accuracy.txt","w+")
 f.write(str(accuracy))
 f.close()
 print("Accuracy is:" ,accuracy , "%")
