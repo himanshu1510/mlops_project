@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+epoch=1
 # In[17]:
 
 
@@ -80,14 +81,14 @@ test_set = test_datagen.flow_from_directory(
 model.fit(
         training_set,
         steps_per_epoch=10000,
-        epochs=1,
+        epochs=epoch,
         validation_data=test_set,
         validation_steps=200)
 acc=model.history
 accuracy=acc.history['val_accuracy'][0]
 accuracy=accuracy*100
 print("Accuracy is:" ,accuracy , "%")
-
+model.save('/workstation/disease.h5')
 
 
 # In[ ]:
