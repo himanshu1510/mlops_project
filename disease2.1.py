@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-epoch=1
 # In[17]:
 
 
@@ -17,6 +16,7 @@ from keras.models import Model
 
 
 model = load_model('/workstation/disease.h5')
+epoch=1
 
 
 # In[19]:
@@ -42,7 +42,7 @@ top_model=Dense(units=64,
 top_model=Dense(units=1,
            activation='sigmoid'
            )(top_model)
-model=Model(inputs=model.input,outputs=top_model)
+model=Model( inputs=model.input , outputs=top_model )
 
 
 # In[26]:
