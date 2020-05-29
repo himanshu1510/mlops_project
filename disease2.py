@@ -193,4 +193,4 @@ print("Accuracy is:" ,accuracy , "%")
 # In[2]:
 
 
-model.save('/root/workstation/disease.h5')
+model.save('/workstation/disease.h5')
