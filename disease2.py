@@ -4,7 +4,7 @@
 # In[1]:
 
 epoch=1
-steps=100
+steps=26000
 from keras.layers import Convolution2D
 
 
